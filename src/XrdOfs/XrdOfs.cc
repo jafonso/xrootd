@@ -2187,7 +2187,7 @@ int XrdOfs::prepare(      XrdSfsPrep       &pargs,      // In
 //
    if (prepAuth)
       while(tp)
-           {AUTHORIZE(client,0,AOP_Read,"prepare",tp->text,out_error);
+           {AUTHORIZE(client,0,AOP_Stage,"prepare",tp->text,out_error);
             tp = tp->next;
            }
 
