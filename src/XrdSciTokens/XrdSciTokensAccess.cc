@@ -956,7 +956,6 @@ private:
                     xrd_rules.emplace_back(AOP_Read, path);
                     xrd_rules.emplace_back(AOP_Readdir, path);
                     xrd_rules.emplace_back(AOP_Stat, path);
-                    xrd_rules.emplace_back(AOP_Poll, path);
                 } else if (!strcmp(acl_authz, "create")) {
                     paths_create_or_modify_seen.insert(path);
                     xrd_rules.emplace_back(AOP_Excl_Create, path);
@@ -964,7 +963,6 @@ private:
                     xrd_rules.emplace_back(AOP_Rename, path);
                     xrd_rules.emplace_back(AOP_Excl_Insert, path);
                     xrd_rules.emplace_back(AOP_Stat, path);
-                    xrd_rules.emplace_back(AOP_Poll, path);
                 } else if (!strcmp(acl_authz, "modify")) {
                     paths_create_or_modify_seen.insert(path);
                     xrd_rules.emplace_back(AOP_Create, path);
@@ -974,14 +972,10 @@ private:
                     xrd_rules.emplace_back(AOP_Update, path);
                     xrd_rules.emplace_back(AOP_Chmod, path);
                     xrd_rules.emplace_back(AOP_Stat, path);
-                    xrd_rules.emplace_back(AOP_Poll, path);
                     xrd_rules.emplace_back(AOP_Delete, path);
                 } else if (!strcmp(acl_authz, "storage.stage")) {
                     xrd_rules.emplace_back(AOP_Stage, path);
                     xrd_rules.emplace_back(AOP_Poll, path);
-                    xrd_rules.emplace_back(AOP_Read, path); // May be removed
-                    xrd_rules.emplace_back(AOP_Readdir, path); // May be removed
-                    xrd_rules.emplace_back(AOP_Stat, path);
                 } else if (!strcmp(acl_authz, "storage.poll")) { // Name to be discussed
                     xrd_rules.emplace_back(AOP_Poll, path);
                 } else if (!strcmp(acl_authz, "write")) {
@@ -999,7 +993,6 @@ private:
                 xrd_rules.emplace_back(AOP_Insert, write_path);
                 xrd_rules.emplace_back(AOP_Update, write_path);
                 xrd_rules.emplace_back(AOP_Stat, write_path);
-                xrd_rules.emplace_back(AOP_Poll, write_path);
                 xrd_rules.emplace_back(AOP_Chmod, write_path);
                 xrd_rules.emplace_back(AOP_Delete, write_path);
             }
