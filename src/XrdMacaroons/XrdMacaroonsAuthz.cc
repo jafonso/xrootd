@@ -384,6 +384,10 @@ AuthzCheck::AuthzCheck(const char *req_path, const Access_Operation req_oper, ss
         break;
     case AOP_Stat:
         m_desired_activity = "READ_METADATA";
+        break;
+    case AOP_Stage:
+    case AOP_Poll:
+        break;
     };
 }
 
