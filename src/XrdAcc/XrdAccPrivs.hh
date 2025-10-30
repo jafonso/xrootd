@@ -50,8 +50,8 @@ enum XrdAccPrivs {XrdAccPriv_All    = 0x1ff,
                   XrdAccPriv_Readdir= 0x020,
                   XrdAccPriv_Write  = 0x040,
                   XrdAccPriv_Update = 0x060,
-                  XrdAccPriv_Stage  = 0x080,  // Stage
-                  XrdAccPriv_Poll   = 0x100,  // Stage poll
+                  XrdAccPriv_Stage  = 0x180,  // Stage + Poll
+                  XrdAccPriv_Poll   = 0x100,  // Poll
                   XrdAccPriv_None   = 0x000
                  };
   
