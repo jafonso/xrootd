@@ -976,7 +976,7 @@ private:
                 } else if (!strcmp(acl_authz, "storage.stage")) {
                     xrd_rules.emplace_back(AOP_Stage, path);
                     xrd_rules.emplace_back(AOP_Poll, path);
-                } else if (!strcmp(acl_authz, "storage.poll")) { // Name to be discussed
+                } else if (!strcmp(acl_authz, "storage.poll")) {
                     xrd_rules.emplace_back(AOP_Poll, path);
                 } else if (!strcmp(acl_authz, "write")) {
                     paths_write_seen.insert(path);
