@@ -13,6 +13,8 @@ add_subdirectory(XrdPosix)
 
 add_subdirectory(XrdHttpTests)
 
+add_subdirectory(XrdKeytabTests)
+
 add_subdirectory(XrdOucTests)
 
 add_subdirectory( XrdSsiTests )
